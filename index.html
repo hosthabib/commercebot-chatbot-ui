@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script defer
+  src="https://www.gstatic.com/ces-console/fast/chat-messenger/prod/v1.15/chat-messenger.js">
+</script>
+<link rel="stylesheet" href="https://www.gstatic.com/ces-console/fast/chat-messenger/prod/v1.15/themes/chat-messenger-default.css">
+<link rel="stylesheet" href="https://www.gstatic.com/ces-console/fast/chat-messenger/prod/v1.15/themes/chat-messenger-layout.css">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <h1>CommerceBot Assistant</h1>
+    </header>
+    <script>
+    window.addEventListener("chat-messenger-loaded", () => {
+      chatSdk.registerContext(
+        chatSdk.prebuilts.ces.createContext({
+          deploymentName: "projects/230707050797/locations/us/apps/0d4fd966-f37c-4228-ab78-65c0b699fcfd/deployments/72ae0d77-83af-4cb9-9a01-3cb7025f84eb",
+          tokenBroker: {
+            enableTokenBroker: true,
+            enableRecaptcha: false
+          }
+        }),
+      );
+    });
+</script>
+<!-- Update the url-allowlist attribute with a comma-separated list of origins allowed to render images -->
+<chat-messenger
+  url-allowlist="*"
+>
+  <chat-messenger-container
+    chat-title="CommerceBot Assistant"
+    chat-title-icon="https://gstatic.com/dialogflow-console/common/assets/ccai-favicons/conversational_agents.png"
+    enable-file-upload
+    enable-audio-input
+  >
+    <chat-reset-session-button
+      slot="titlebar-actions"
+      title-text="Start new chat"
+    ></chat-reset-session-button>
+    <chat-toggle-dialog-button
+      slot="titlebar-actions"
+      title-text-expanded="Collapse"
+      title-text-collapsed="Expand"
+    ></chat-toggle-dialog-button>
+    <chat-messenger-close-button
+      slot="titlebar-actions"
+      title-text="Close"
+    ></chat-messenger-close-button>
+  </chat-messenger-container>
+</chat-messenger>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* General body styling */
+body {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+}
+
+/* Header styling */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+
+/* Styling the main chat messenger container */
+chat-messenger {
+    max-width: 600px; /* Adjust as needed */
+    width: 100%;
+    margin: 20px auto; /* Center horizontally and add some vertical margin */
+    display: block; /* Ensure it behaves as a block element for margin auto to work */
+}
+
+chat-messenger-container {
+    --df-messenger-border-radius: 15px;
+    --df-messenger-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    --df-messenger-font-family: 'Roboto', sans-serif;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white to blend with theme */
+}
+
+/* Title bar styling */
+.chat-titlebar {
+    background-color: #6a11cb;
+    color: #ffffff;
+    padding: 15px;
+    border-bottom: 1px solid #5e0fcb;
+}
+
+/* User input styling */
+.input-container {
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+#chat-input {
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+}
+
+/* Message styling */
+.message.user-message {
+    background-color: #2575fc;
+    color: #ffffff;
+    border-radius: 15px 15px 0 15px;
+    padding: 10px 15px;
+    align-self: flex-end;
+}
+
+.message.bot-message {
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 15px 15px 15px 0;
+    padding: 10px 15px;
+    align-self: flex-start;
+}
